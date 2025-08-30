@@ -4,11 +4,13 @@ from rest_framework.response import Response
 from rest_framework.decorators import action
 from django.utils.timezone import now, timedelta
 from apps.tracking.models import LocationModel
+from drf_spectacular.utils import extend_schema
 from apps.tracking.serializers.serializers import LocationSerializer
 from apps.device.models import DeviceModel
 from external.pagination import CustomPagination
 import math
 
+@extend_schema(tags=['Tracking'])
 class LocationViewSet(ModelViewSet):
     queryset = LocationModel.objects.all()
     serializer_class = LocationSerializer
