@@ -13,4 +13,4 @@ class LocationSerializer(ModelSerializer):
     
     class Meta:
         model = LocationModel
-        exclude = exclude_list + ['id']
+        exclude = exclude_list

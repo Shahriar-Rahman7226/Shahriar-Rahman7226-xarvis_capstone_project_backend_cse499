@@ -34,7 +34,7 @@ urlpatterns = [
     path('authentication/', include('apps.authentication.urls.urls')),
     path('device/', include('apps.device.urls.urls')),
     path('activity/', include('apps.activity.urls.urls')),
-    # path('tracking/', include('apps.tracking.urls.urls')),
+    path('tracking/', include('apps.tracking.urls.urls')),
 ] + swagger_urlpatterns
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
